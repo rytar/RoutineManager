@@ -16,7 +16,7 @@ const createWindow = () => {
         opacity: 0.9
     });
 
-    mainWindow.loadFile("index.html");
+    mainWindow.loadFile("./src/index.html");
 
     // mainWindow.webContents.openDevTools();
 

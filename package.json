@@ -2,11 +2,11 @@
   "name": "routinemanager",
   "version": "1.0.0",
   "description": "Application for managing your routines.",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
-    "start": "electron ./src",
-    "build-macOS": "electron-packager ./src RoutineManager --platform=darwin --arch=x64 --overwrite",
-    "build-windows": "electron-packager ./src RoutineManager --platform=win32 --arch=x64 --overwrite"
+    "start": "electron .",
+    "build-mac": "electron-builder build --mac --x64",
+    "build-win": "electron-builder build --win --x64"
   },
   "repository": {
     "type": "git",
@@ -20,11 +20,35 @@
   "homepage": "https://github.com/rytar/RoutineManager#readme",
   "devDependencies": {
     "electron": "^14.0.1",
-    "electron-packager": "^15.4.0"
+    "electron-builder": "^22.11.7"
   },
   "dependencies": {
     "@editorjs/checklist": "^1.3.0",
     "@editorjs/editorjs": "^2.22.2",
     "@editorjs/header": "^2.6.1"
+  },
+  "build": {
+    "appId": "com.electron.routinemanager",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "data",
+      "src",
+      "package.json",
+      "package-lock.json"
+    ],
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   }
 }
