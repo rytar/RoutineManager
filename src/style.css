@@ -1,9 +1,13 @@
 body {
     width: 100%;
-    height: 4000px;
+    height: 100%;
     margin: 0;
-    padding: 20px;
+    padding: 30px;
     overflow: hidden;
-    background-color: #ffefd5;
+    /* background-color: #ffefd5; */
     -webkit-app-region: drag;
+}
+
+.ce-toolbar--opened {
+    width: 90%;
 }

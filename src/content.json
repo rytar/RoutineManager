@@ -1,0 +1,30 @@
+{
+ "time": 1632213637715,
+ "blocks": [
+  {
+   "id": "oq4vaoyDt5",
+   "type": "header",
+   "data": {
+    "text": "Routine Manager",
+    "level": 2
+   }
+  },
+  {
+   "id": "JHQpRvGy5i",
+   "type": "checklist",
+   "data": {
+    "items": [
+     {
+      "text": "リングフィット10分",
+      "checked": false
+     },
+     {
+      "text": "ポーカーチェイス2戦",
+      "checked": false
+     }
+    ]
+   }
+  }
+ ],
+ "version": "2.22.2"
+}

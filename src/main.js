@@ -12,7 +12,8 @@ const createWindow = () => {
         width: 300,
         height: 400,
         alwaysOnTop: true,
-        frame: false
+        frame: false,
+        opacity: 0.9
     });
 
     mainWindow.loadFile("index.html");
