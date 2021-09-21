@@ -1,0 +1,22 @@
+{
+  "name": "routinemanager",
+  "version": "1.0.0",
+  "description": "Application for managing your routines.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rytar/RoutineManager.git"
+  },
+  "author": "rytar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rytar/RoutineManager/issues"
+  },
+  "homepage": "https://github.com/rytar/RoutineManager#readme",
+  "devDependencies": {
+    "electron": "^14.0.1"
+  }
+}
