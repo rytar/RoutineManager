@@ -10,7 +10,9 @@ const createWindow = () => {
             contextIsolation: false
         },
         width: 800,
-        height: 600
+        height: 600,
+        alwaysOnTop: true,
+        frame: false
     });
 
     mainWindow.loadFile("index.html");
