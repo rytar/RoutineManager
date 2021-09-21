@@ -4,7 +4,9 @@
   "description": "Application for managing your routines.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ./src",
+    "build-macOS": "electron-packager ./src RoutineManager --platform=darwin --arch=x64 --overwrite",
+    "build-windows": "electron-packager ./src RoutineManager --platform=win32 --arch=x64 --overwrite"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/rytar/RoutineManager#readme",
   "devDependencies": {
-    "electron": "^14.0.1"
+    "electron": "^14.0.1",
+    "electron-packager": "^15.4.0"
   }
 }
