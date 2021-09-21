@@ -9,13 +9,15 @@ const createWindow = () => {
             nodeIntegration: true,
             contextIsolation: false
         },
-        width: 400,
-        height: 600,
+        width: 300,
+        height: 400,
         alwaysOnTop: true,
         frame: false
     });
 
     mainWindow.loadFile("index.html");
+
+    // mainWindow.webContents.openDevTools();
 
     mainWindow.on("closed", () => {
         mainWindow = null;
