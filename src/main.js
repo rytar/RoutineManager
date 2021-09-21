@@ -9,7 +9,7 @@ const createWindow = () => {
             nodeIntegration: true,
             contextIsolation: false
         },
-        width: 800,
+        width: 400,
         height: 600,
         alwaysOnTop: true,
         frame: false
