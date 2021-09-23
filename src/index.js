@@ -1,23 +1,25 @@
 const EditorJS = require("@editorjs/editorjs");
 const Header = require("@editorjs/header");
 const CheckList = require("@editorjs/checklist");
-// const fs = require("fs");
+const { ipcRenderer } = require("electron");
 
-// const content = JSON.parse(fs.readFileSync("./data/content.json", "utf8"));
+ipcRenderer.invoke("get-contents").then((result) => {
+    const contents = result;
 
-const editor = new EditorJS({
-    holder: "editorjs",
-    tools: {
-        header: Header,
-        checklist: {
-            class: CheckList,
-            inlineToolBar: true
+    const editor = new EditorJS({
+        holder: "editorjs",
+        tools: {
+            header: Header,
+            checklist: {
+                class: CheckList,
+                inlineToolBar: true
+            }
+        },
+        data: contents,
+        onChange: () => {
+            editor.save().then((result) => {
+                ipcRenderer.invoke("change-contents", result);
+            });
         }
-    },
-    // data: content,
-    // onChange: () => {
-    //     editor.save().then((result) => {
-    //         fs.writeFileSync("./data/content.json", JSON.stringify(result, null, ' '));
-    //     });
-    // }
+    });
 });

@@ -5,7 +5,12 @@ body {
     padding: 30px;
     overflow: hidden;
     /* background-color: #ffefd5; */
+    background-color: white;
     -webkit-app-region: drag;
+}
+
+div#editorjs {
+    -webkit-app-region: no-drag;
 }
 
 .ce-toolbar--opened {
