@@ -31,7 +31,7 @@ const createWindow = () => {
 
     mainWindow.loadFile("./src/index.html");
 
-    // mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
 
     mainWindow.once("ready-to-show", () => {
         mainWindow.show();

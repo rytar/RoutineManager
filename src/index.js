@@ -1,6 +1,5 @@
 const EditorJS = require("@editorjs/editorjs");
 const Header = require("@editorjs/header");
-const List = require("@editorjs/list");
 const NestedList = require("@editorjs/nested-list");
 const CheckList = require("@editorjs/checklist");
 const Code = require("@editorjs/code");
@@ -24,10 +23,6 @@ ipcRenderer.invoke("get-contents").then((result) => {
         tools: {
             header: Header,
             list: {
-                class: List,
-                inlineToolBar: InlineTools
-            },
-            nestedlist: {
                 class: NestedList,
                 inlineToolBar: InlineTools
             },
